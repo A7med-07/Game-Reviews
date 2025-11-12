@@ -30,3 +30,24 @@ document.addEventListener('click', async (e) => {
 btnClose.addEventListener('click', () => {
   detailsSection.classList.add('d-none');
 });
+
+const navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', async () => {
+
+  
+    navLinks.forEach(l => l.classList.remove('active'));
+
+ 
+    link.classList.add('active');
+
+
+    const category = link.getAttribute('data-category');
+
+    const allGames = await gamesAPI.getGames(category);
+
+
+    ui.displayGames(allGames);
+  });
+});
