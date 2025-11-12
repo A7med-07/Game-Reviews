@@ -1,0 +1,226 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nerko One", cursive;
+  color: #fff !important;
+}
+
+
+body {
+  font-family: "Comfortaa", cursive;
+  min-height: 100%;
+  min-width: 100%;
+  background-color: #272B30;
+  color: #fff;
+}
+
+a,
+p,
+span {
+  color: inherit !important;
+}
+
+
+header img {
+  background-image: linear-gradient(#272B30, #272B30);
+  max-height: 30vh;
+  object-fit: cover;
+}
+
+nav {
+  background-color: rgb(58, 73, 123) !important;
+  margin-inline: auto;
+  margin-top: -30px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.7);
+}
+
+.nav-link {
+  color: white !important;
+  padding: 8px 20px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+
+  color: #00aaff !important;
+}
+
+.righteous-regular {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.home .card {
+  filter: grayscale(0.7);
+  transition: transform 0.5s, filter 0.5s 0.1s;
+}
+
+.home .card:hover {
+  filter: grayscale(0);
+  transform: scale(1.05);
+}
+
+.badge-color {
+  background-color: #0080ff;
+}
+
+
+
+
+
+
+
+/* From Uiverse.io by Z4drus */
+.loader {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  /* smooth background */
+  background: radial-gradient(circle,
+      rgba(255, 255, 255, 0.05) 30%,
+      transparent 70%);
+  overflow: hidden;
+}
+
+/* outside circle */
+.loader::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top-color: rgba(255, 255, 255, 0.6);
+  animation: loader-spin 2s linear infinite;
+}
+
+/* rotating circle */
+.loader::after {
+  content: "";
+  position: absolute;
+  inset: 10%;
+  border-radius: 50%;
+  background: conic-gradient(from 90deg, rgba(255, 255, 255, 0.2), transparent);
+  filter: blur(2px);
+  animation: loader-spin-reverse 1.5s linear infinite;
+}
+
+/* center circle */
+.loader__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  animation: loader-pulse 1s ease-in-out infinite;
+}
+
+/* Container */
+.loader__orbit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: orbit-rotate 3s linear infinite;
+}
+
+/* dots */
+.loader__dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+
+/* 4 dots */
+.loader__dot:nth-child(1) {
+  transform: rotate(0deg) translate(60px);
+}
+
+.loader__dot:nth-child(2) {
+  transform: rotate(90deg) translate(60px);
+}
+
+.loader__dot:nth-child(3) {
+  transform: rotate(180deg) translate(60px);
+}
+
+.loader__dot:nth-child(4) {
+  transform: rotate(270deg) translate(60px);
+}
+
+/* Animations */
+
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-spin-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes loader-pulse {
+
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+@keyframes orbit-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.details {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+   min-height: 100vh;
+  background-color: #27282B;
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  overflow-y: auto;
+  color: #fff;
+  padding: 40px 0;
+
+}
